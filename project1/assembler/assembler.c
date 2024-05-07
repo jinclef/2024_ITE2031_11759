@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	inFileString = argv[1];
-	outFileString = argv[2];
+	inFileString = argv[1]; // .as
+	outFileString = argv[2]; // .mc
 
 	inFilePtr = fopen(inFileString, "r");
 	if (inFilePtr == NULL) {
@@ -40,9 +40,12 @@ int main(int argc, char *argv[])
 		 inFilePtr */
 	if (!readAndParse(inFilePtr, label, opcode, arg0, arg1, arg2)) {
 		/* reached end of file */
+		return 0;
 	}
 
 	/* TODO: Phase-1 label calculation */
+	
+
 
 	/* this is how to rewind the file ptr so that you start reading from the
 		 beginning of the file */
