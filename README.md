@@ -4,9 +4,15 @@
 - LC2K 어셈블리어를 기계어로 변환하는 어셈블러입니다.
 
 #### 실행방법
+##### compile
 ```bash
 $ make clean
 $ make
+```
+
+##### execute
+```bash
+$ ./assembler.exe <input_file>.as <output_file>.mc
 ```
 
 #### 테스트 실행 방법
